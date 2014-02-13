@@ -21,4 +21,4 @@ ORDER BY
 	, hs.PD_NO
 	, hs.CASH_RECPT_NO
 	, h.LN_NO
-;
+;	
