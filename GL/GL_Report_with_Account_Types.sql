@@ -5,7 +5,10 @@ SELECT
 	, LEFT(gl.ORG_ID, 4) AS ORG_SECOND_LVL
 	, LEFT(gl.	ORG_ID, 7) AS ORG_THIRD_LVL
 	, CASE 
-		WHEN 
+		WHEN	
+			-- NOTE the 1140 accounts are credit cards;  these need to 
+			-- be changed to 21XX (liability) accounts, at which point this section
+			-- of script should be removed.
 			gl.ACCT_ID LIKE '1140-1%'
 			OR gl.ACCT_ID LIKE '1140-2%'
 			THEN 'LIABILITY'
